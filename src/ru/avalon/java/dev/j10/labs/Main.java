@@ -1,6 +1,7 @@
 package ru.avalon.java.dev.j10.labs;
 
 import ru.avalon.java.dev.j10.labs.shapes.Shape;
+import ru.avalon.java.dev.j10.labs.shapes.*;  //незабудь убрать
 
 public class Main {
 
@@ -19,5 +20,19 @@ public class Main {
          *    площадью. Для поиска фигуры необходимо создать
          *    статический метод в текущем классе (Main).
          */
+        
+        Circle circle = new Circle (3);
+        System.out.println("Периметр: " + circle.getLength());
+        System.out.println("Площадь: " + circle.getArea());
+        System.out.println("Поворот: " + circle.getRotation());
+        Rectangle rectangle = new Rectangle (2, 4);
+        System.out.println("Периметр: " + rectangle.getPerimeter());
+        System.out.println("Площадь: " + rectangle.getArea());
+        System.out.println("Поворот: " + rectangle.getRotation());
+        Triangle triangle = new Triangle (2, 3, 2);
+        System.out.println("Периметр: " + triangle.getPerimeter());
+        System.out.println("Площадь: " + triangle.getArea());
+        System.out.println("Поворот: " + triangle.getRotation());
+        
     }
 }
