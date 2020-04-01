@@ -32,4 +32,10 @@ public class Rectangle implements Polygon{
     public float getArea(){
         return (float)Math.abs(sideA*sideB);
     }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" + "sideA=" + sideA + ", sideB=" + sideB + '}' + " Площадь прямоугольника = " + getArea();
+    }
+    
 }
