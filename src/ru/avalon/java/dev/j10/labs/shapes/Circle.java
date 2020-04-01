@@ -31,6 +31,12 @@ public class Circle implements Ellipse{
     public float getArea(){
             return (float)Math.PI*(float)Math.pow(radius, 2);
     }
+
+    @Override
+    public String toString() {
+        return "Circle{" + "radius=" + radius + '}' + " Площадь круга = " + getArea();
+    }
+    
     
 
 }

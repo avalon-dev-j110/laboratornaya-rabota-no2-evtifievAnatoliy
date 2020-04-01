@@ -47,4 +47,10 @@ public class Triangle implements Polygon{
             return 0;
         
     }
+
+    @Override
+    public String toString() {
+        return "Triangle{" + "sideA=" + sideA + ", sideB=" + sideB + ", sideC=" + sideC + '}' + " Площадь треугольника = " + getArea();
+    }
+    
 }
