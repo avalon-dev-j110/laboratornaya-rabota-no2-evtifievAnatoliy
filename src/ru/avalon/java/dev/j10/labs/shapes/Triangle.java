@@ -25,26 +25,25 @@ public class Triangle implements Polygon{
     private float sideB;
     private float sideC;
     private float halfPerimetr;
+    private ClassPoint pointA;
+    private ClassPoint pointB;
+    private ClassPoint pointC;
+    
 
-    public Triangle(float sideA, float sideB, float sideC) {
-        this.sideA = sideA;
-        this.sideB = sideB;
-        this.sideC = sideC;
+    public Triangle(ClassPoint pointA, ClassPoint pointB, ClassPoint pointC) {
+        this.sideA = (float)Math.sqrt(Math.pow((pointC.getX()-pointA.getX()), 2)+Math.pow((pointC.getY()-pointA.getY()),2));
+        this.sideB = (float)Math.sqrt(Math.pow((pointB.getX()-pointA.getX()), 2)+Math.pow((pointB.getY()-pointA.getY()),2));
+        this.sideC = (float)Math.sqrt(Math.pow((pointC.getX()-pointB.getX()), 2)+Math.pow((pointC.getY()-pointB.getY()),2));
         halfPerimetr = getPerimeter()/2;
     }
-    
-    
+     
     
     public float getPerimeter(){
         return (float)Math.abs(sideA + sideB + sideC);
     }
     
     public float getArea(){
-        //формула Герона
-        if (halfPerimetr > sideA && halfPerimetr > sideB && halfPerimetr > sideC)
-            return (float)Math.sqrt(halfPerimetr*(halfPerimetr - sideA)*(halfPerimetr - sideB)*(halfPerimetr - sideC));
-        else 
-            return 0;
+        return (float)Math.sqrt(halfPerimetr*(halfPerimetr - sideA)*(halfPerimetr - sideB)*(halfPerimetr - sideC));
         
     }
 

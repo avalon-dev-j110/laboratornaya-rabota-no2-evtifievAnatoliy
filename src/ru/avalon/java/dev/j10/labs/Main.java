@@ -7,16 +7,16 @@ public class Main {
 
     public static void main(String[] args) {
         Shape[] shapes = new Shape[10];
-        shapes[0] = new Circle (5, 0, 0);
-        shapes[1] = new Circle (2, 0, 0);
-        shapes[2] = new Circle ((float)3.5, 0, 0);
-        shapes[3] = new Rectangle (10, 9);
-        shapes[4] = new Rectangle (2, 5);
-        shapes[5] = new Rectangle (3, 4);
-        shapes[6] = new Triangle (2, 3, 2);
-        shapes[7] = new Triangle (2, 3, 2);
-        shapes[8] = new Triangle (1, (float) 2.5, 2);
-        shapes[9] = new Triangle (14, 20, 11);
+        shapes[0] = new Circle (5, new ClassPoint(0,0));
+        shapes[1] = new Circle (2, new ClassPoint(0,0));
+        shapes[2] = new Circle ((float)3.5, new ClassPoint(0,0));
+        shapes[3] = new Rectangle (new ClassPoint(0,0), new ClassPoint(0,5));
+        shapes[4] = new Rectangle (new ClassPoint(10,5), new ClassPoint(1,10));
+        shapes[5] = new Rectangle (new ClassPoint(0,1), new ClassPoint(10,9));
+        shapes[6] = new Triangle (new ClassPoint(0,0), new ClassPoint(0,5), new ClassPoint(5,0));
+        shapes[7] = new Triangle (new ClassPoint(15,0), new ClassPoint(7,5), new ClassPoint(5,1));
+        shapes[8] = new Triangle (new ClassPoint(20,-1), new ClassPoint(1,5), new ClassPoint(1,18));
+        shapes[9] = new Triangle (new ClassPoint(6,-10), new ClassPoint(18,1), new ClassPoint(5,1));
         
         
         /*

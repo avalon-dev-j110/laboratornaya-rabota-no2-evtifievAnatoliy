@@ -17,10 +17,21 @@ public class Rectangle implements Polygon{
      */
     private float sideA;
     private float sideB;
+    private ClassPoint pointA;
+    private ClassPoint pointC;
 
     public Rectangle(float sideA, float sideB) {
         this.sideA = sideA;
         this.sideB = sideB;
+    }
+
+    public Rectangle(ClassPoint pointA, ClassPoint pointC) {
+        this.sideA = pointC.getX() - pointA.getX();
+        this.sideB = pointC.getY() - pointA.getY();
+        if (this.sideA <0 )
+            this.sideA = -this.sideA;
+        if (this.sideB <0 )
+            this.sideB = -this.sideB;
     }
     
     

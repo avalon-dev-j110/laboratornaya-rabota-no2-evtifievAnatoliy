@@ -8,7 +8,7 @@ package ru.avalon.java.dev.j10.labs.shapes;
  *
  * @see <a href="https://ru.wikipedia.org/wiki/%D0%9E%D0%BA%D1%80%D1%83%D0%B6%D0%BD%D0%BE%D1%81%D1%82%D1%8C">Окружность</a>
  */
-public class Circle implements Ellipse, Point{
+public class Circle implements Ellipse{
 
     /*
      * TODO: Реализовать класс 'Circle'
@@ -17,14 +17,15 @@ public class Circle implements Ellipse, Point{
      */
     
     private float radius;
-    private float pointX;
-    private float pointY;
+    private ClassPoint point;
+    
 
-    public Circle(float radius, float pointX, float pointY) {
+    public Circle(float radius, ClassPoint point) {
         this.radius = radius;
-        this.pointX = pointX;
-        this.pointY = pointY;
+        this.point = point;
     }
+
+    
     
     
     
@@ -40,17 +41,5 @@ public class Circle implements Ellipse, Point{
     public String toString() {
         return "Circle{" + "radius=" + radius + '}' + " Площадь круга = " + getArea();
     }
-
-    @Override
-    public float getX() {
-        return this.pointX;
-    }
-
-    @Override
-    public float getY() {
-        return this.pointX;    
-    }
-    
-    
 
 }
