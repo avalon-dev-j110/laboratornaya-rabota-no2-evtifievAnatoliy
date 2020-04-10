@@ -7,9 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
         Shape[] shapes = new Shape[10];
-        shapes[0] = new Circle (5);
-        shapes[1] = new Circle (2);
-        shapes[2] = new Circle ((float)3.5);
+        shapes[0] = new Circle (5, 0, 0);
+        shapes[1] = new Circle (2, 0, 0);
+        shapes[2] = new Circle ((float)3.5, 0, 0);
         shapes[3] = new Rectangle (10, 9);
         shapes[4] = new Rectangle (2, 5);
         shapes[5] = new Rectangle (3, 4);
@@ -36,10 +36,10 @@ public class Main {
             System.out.println("Площадь фигуры " + i + " = "  + shapes[i-1].getArea());
         
         //System.out.println("Площадь самой большой фигуры = "  + MaxAreaShape(shapes).getArea());
-        System.out.println("Самая большая фигура: " + MaxAreaShape(shapes).toString());
+        System.out.println("Самая большая фигура: " + maxAreaShape(shapes).toString());
         
     }
-    public static Shape MaxAreaShape (Shape[] shapes){
+    public static Shape maxAreaShape (Shape[] shapes){
         Shape maxAreaShape = shapes[0];
         //for (Shape item : shapes)
         for (int i =0; i<shapes.length-1; i++)
