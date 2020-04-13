@@ -43,8 +43,17 @@ public class Triangle implements Polygon{
     }
     
     public float getArea(){
-        return (float)Math.sqrt(halfPerimetr*(halfPerimetr - sideA)*(halfPerimetr - sideB)*(halfPerimetr - sideC));
-        
+        //-------------------формула Герона
+        //if (halfPerimetr > sideA && halfPerimetr > sideB && halfPerimetr > sideC) 
+        //Это условие выполняется всегда, т.к. треугольник задаем через точки. 
+        //Если треугольник задать через стороны, то необходимо ставить такую проверку.
+        try{
+            return (float)Math.sqrt(halfPerimetr*(halfPerimetr - sideA)*(halfPerimetr - sideB)*(halfPerimetr - sideC));
+        }
+        catch(Exception ex){
+            return 0;
+        }
+                
     }
 
     @Override

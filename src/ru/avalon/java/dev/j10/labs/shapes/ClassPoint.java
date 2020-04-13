@@ -29,10 +29,5 @@ public class ClassPoint implements Point{
     public float getY() {
         return pointY;
     }
-
-    @Override
-    public float getArea() {
-        return 0;
-    }
     
 }

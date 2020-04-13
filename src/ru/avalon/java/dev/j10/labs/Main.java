@@ -6,6 +6,7 @@ import ru.avalon.java.dev.j10.labs.shapes.*;
 public class Main {
 
     public static void main(String[] args) {
+    //    Shape[] shapes = null;
         Shape[] shapes = new Shape[10];
         shapes[0] = new Circle (5, new ClassPoint(0,0));
         shapes[1] = new Circle (2, new ClassPoint(0,0));
@@ -31,23 +32,28 @@ public class Main {
          *    площадью. Для поиска фигуры необходимо создать
          *    статический метод в текущем классе (Main).
          */
-        
+        /*
         for (int i=1 ; i<=10; i++)
             System.out.println("Площадь фигуры " + i + " = "  + shapes[i-1].getArea());
-        
+        */
         //System.out.println("Площадь самой большой фигуры = "  + MaxAreaShape(shapes).getArea());
-        System.out.println("Самая большая фигура: " + maxAreaShape(shapes).toString());
+        System.out.println("Самая большая фигура: " + maxAreaShape(shapes));
         
     }
-    public static Shape maxAreaShape (Shape[] shapes){
-        Shape maxAreaShape = shapes[0];
-        //for (Shape item : shapes)
-        for (int i =0; i<shapes.length-1; i++)
-        {
-            if (maxAreaShape.getArea() < shapes[i+1].getArea())
-                maxAreaShape = shapes[i+1];
-        }
+    public static String maxAreaShape (Shape[] shapes){
         
-        return maxAreaShape;
+        //for (Shape item : shapes)
+        try{
+            Shape maxAreaShape = shapes[0];
+            for (int i =0; i<shapes.length-1; i++)
+            {
+                if (maxAreaShape.getArea() < shapes[i+1].getArea())
+                     maxAreaShape = shapes[i+1];
+            }
+            return maxAreaShape.toString();
+        }
+        catch(Exception ex){
+            return ex.toString();
+        }
     }
 }
