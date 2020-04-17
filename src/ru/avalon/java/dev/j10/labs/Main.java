@@ -40,20 +40,19 @@ public class Main {
         System.out.println("Самая большая фигура: " + maxAreaShape(shapes));
         
     }
-    public static String maxAreaShape (Shape[] shapes){
+    public static Shape maxAreaShape (Shape[] shapes){
         
         //for (Shape item : shapes)
-        try{
+        if (shapes == null)
+        {
             Shape maxAreaShape = shapes[0];
             for (int i =0; i<shapes.length-1; i++)
-            {
                 if (maxAreaShape.getArea() < shapes[i+1].getArea())
-                     maxAreaShape = shapes[i+1];
-            }
-            return maxAreaShape.toString();
+                    maxAreaShape = shapes[i+1];
+            return maxAreaShape;
         }
-        catch(Exception ex){
-            return ex.toString();
-        }
+        else
+            return null;
+        
     }
 }
