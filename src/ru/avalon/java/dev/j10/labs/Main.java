@@ -43,13 +43,15 @@ public class Main {
     public static Shape maxAreaShape (Shape[] shapes){
         
         //for (Shape item : shapes)
-        if (shapes != null)
+        if (shapes != null && shapes.length !=0)
         {
             Shape maxAreaShape = shapes[0];
-            for (int i =0; i<shapes.length-1; i++)
-                if (maxAreaShape.getArea() < shapes[i+1].getArea())
-                    maxAreaShape = shapes[i+1];
+            if (shapes.length > 1)
+                for (int i =0; i<shapes.length-1; i++)
+                    if (maxAreaShape.getArea() < shapes[i+1].getArea())
+                        maxAreaShape = shapes[i+1];
             return maxAreaShape;
+            
         }
         else
             return null;
